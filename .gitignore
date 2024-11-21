@@ -1,0 +1,43 @@
+# Eclipse-specific files
+/.settings/
+/.project
+/.classpath
+/bin/
+
+# Maven-specific files
+/target/
+/pom.xml.tag
+/pom.xml.releaseBackup
+/pom.xml.versionsBackup
+/logs/
+*.log
+
+# Gradle-specific files
+/.gradle/
+/build/
+/*.gradle
+/*.gradle.kts
+
+# IntelliJ IDEA (optional if using both IDEs)
+/.idea/
+/*.iml
+/out/
+
+# Java-specific files
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Git-specific files
+*.orig
