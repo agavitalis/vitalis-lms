@@ -1,4 +1,8 @@
 package lms.enums;
 
- enum UserType{
+enum UserType{
+	ADMIN,
+	USER,
+	GUEST,
+	LIBRARIAN
 }
