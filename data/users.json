@@ -1,0 +1,13 @@
+[{
+    "firstName": "Vitalis",
+    "lastName": "Ogbonna",
+    "password": "12345",
+	"role": "Student"
+},
+{
+    "firstName": "Nandini",
+    "lastName": "Prof",
+    "password": "12345",
+	"role": "Admin"
+}
+]
