@@ -13,7 +13,6 @@ public class Book {
     private String summary;
     private String format; 
     private String availability;
-    private double price;
 
     public String getTitle() {
         return title;
@@ -103,11 +102,4 @@ public class Book {
         this.availability = availability;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 }

@@ -3,6 +3,7 @@ package lms;
 import java.util.Scanner;
 
 import lms.controllers.AuthController;
+import lms.controllers.BookController;
 
 public class Main {
 
@@ -48,7 +49,7 @@ public class Main {
 			AuthController.register(scanner);
 			break;
 		case 3:
-			System.out.println("You selected Browse Catalog.");
+			BookController.getBooks();
 			break;
 		case 4:
 			System.out.println("You selected Contact support.");
