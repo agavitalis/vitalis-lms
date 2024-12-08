@@ -12,7 +12,7 @@ public interface IUserService {
      *
      * @param email     The email of the user to save.
      * @param password  The password of the user to save.
-     * @param role  The type of the user (e.g., admin, regular user).
+     * @param role  The type of the user (e.g., admin, regular user, librarian ).
      * @throws IOException If there is an issue accessing or modifying the data file.
      */
 	void saveUser(String firstName, String lastName, String email, String password, UserRole role) throws IOException;
@@ -25,7 +25,17 @@ public interface IUserService {
      * @return          True if authentication is successful, false otherwise.
      * @throws IOException If there is an issue accessing the data file.
      */
-    User getUser(String email, String password) throws IOException;
+    User loginUser(String email, String password) throws IOException;
+    
+    /**
+     * Authenticate a user based on email and password.
+     *
+     * @param email     The email of the user attempting to authenticate.
+     
+     * @return          User if a user with the email is found.
+     * @throws IOException If there is an issue accessing the data file.
+     */
+     User getUser(String email)throws IOException;
 
     /**
      * Retrieve all users from the database.

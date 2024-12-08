@@ -42,9 +42,8 @@ public class UserService implements IUserService {
         try {
             // Write the users list to the file with pretty printing
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, users);
-            System.out.println("Data has been written to the file.");
         } catch (IOException e) {
-            System.out.println("An error occurred while writing to the file.");
+            System.out.println("An error occurred while saving your data.");
             e.printStackTrace();  
         }
         
@@ -56,10 +55,27 @@ public class UserService implements IUserService {
 			    firstName, lastName, email));
     }
     
-    public User getUser(String email, String password)throws IOException {
+    public User getUser(String email)throws IOException {
+    	List<User> users = getUsers();
+        for (User user : users) {
+            if (email.equals(user.getEmail())) {
+                return user; 
+            }
+        }
+        return null; 
+    }
+    
+    public User loginUser(String email, String password)throws IOException {
     	List<User> users = getUsers();
         for (User user : users) {
             if (email.equals(user.getEmail()) && password.equals(user.getPassword())) {
+            	
+            	System.out.println(String.format(
+        			    "\nLogin Successful!\n" +
+        			    "First Name: %s\n" +
+        			    "Last Name: %s\n" +
+        			    "Email: %s", 
+        			    user.getFirstName(), user.getLastName(), user.getEmail()));
                 return user; 
             }
         }

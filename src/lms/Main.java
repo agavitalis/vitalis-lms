@@ -42,7 +42,7 @@ public class Main {
 
 		switch (userChoice) {
 		case 1:
-			System.out.println("You selected Login.");
+			AuthController.login(scanner);
 			break;
 		case 2:
 			AuthController.register(scanner);
