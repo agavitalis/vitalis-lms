@@ -1,6 +1,6 @@
 package lms.enums;
 
-enum UserType{
+public enum UserRole{
 	ADMIN,
 	USER,
 	GUEST,

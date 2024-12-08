@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import lms.entities.User;
+import lms.enums.UserRole;
 
 public interface IUserService {
     /**
@@ -14,7 +15,7 @@ public interface IUserService {
      * @param role  The type of the user (e.g., admin, regular user).
      * @throws IOException If there is an issue accessing or modifying the data file.
      */
-	void saveUser(String firstName, String lastName, String email, String password, String role) throws IOException;
+	void saveUser(String firstName, String lastName, String email, String password, UserRole role) throws IOException;
    
     /**
      * Authenticate a user based on email and password.
