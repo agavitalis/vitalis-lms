@@ -1,0 +1,44 @@
+[
+  {
+    "Title": "To Kill a Mockingbird",
+    "Authors": ["Harper Lee"],
+    "ISBN": "978-0-06-112008-4",
+    "PublicationYear": 1960,
+    "Language": "English",
+    "Publisher": "J.B. Lippincott & Co.",
+    "Genres": ["Fiction", "Drama"],
+    "PageCount": 281,
+    "Summary": "A novel about the serious issues of rape and racial inequality narrated by a young girl in the American South.",
+    "Format": "Hardcover",
+    "Availability": "In Stock",
+    "Price": 15.99
+  },
+  {
+    "Title": "1984",
+    "Authors": ["George Orwell"],
+    "ISBN": "978-0-452-28423-4",
+    "PublicationYear": 1949,
+    "Language": "English",
+    "Publisher": "Secker & Warburg",
+    "Genres": ["Dystopian", "Political Fiction", "Science Fiction"],
+    "PageCount": 328,
+    "Summary": "A dystopian novel set in a totalitarian regime under constant surveillance by Big Brother.",
+    "Format": "Paperback",
+    "Availability": "Out of Stock",
+    "Price": 12.50
+  },
+  {
+    "Title": "The Great Gatsby",
+    "Authors": ["F. Scott Fitzgerald"],
+    "ISBN": "978-0-7432-7356-5",
+    "PublicationYear": 1925,
+    "Language": "English",
+    "Publisher": "Charles Scribner's Sons",
+    "Genres": ["Fiction", "Tragedy"],
+    "PageCount": 180,
+    "Summary": "A story about the young and mysterious millionaire Jay Gatsby and his quixotic passion for Daisy Buchanan.",
+    "Format": "eBook",
+    "Availability": "In Stock",
+    "Price": 9.99
+  }
+]
