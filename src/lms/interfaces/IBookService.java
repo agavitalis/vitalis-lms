@@ -9,7 +9,7 @@ public interface IBookService {
      * 
      * @param book The book to be saved.
      */
-    void saveBook(Book book) throws IOException;
+    void createBook(Book book) throws IOException;
 
     /**
      * Retrieve a book by its isbn.

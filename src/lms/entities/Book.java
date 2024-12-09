@@ -12,7 +12,7 @@ public class Book {
     private int pageCount;
     private String summary;
     private String format; 
-    private String availability;
+    private Boolean availability;
 
     public String getTitle() {
         return title;
@@ -94,11 +94,11 @@ public class Book {
         this.format = format;
     }
 
-    public String getAvailability() {
+    public Boolean getAvailability() {
         return availability;
     }
 
-    public void setAvailability(String availability) {
+    public void setAvailability(Boolean availability) {
         this.availability = availability;
     }
 

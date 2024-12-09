@@ -8,6 +8,7 @@ import lms.enums.UserRole;
 import lms.services.UserService;
 
 public class AuthController {
+	
 	public static void register(Scanner scanner) {
 
 		String firstName = "", lastName = "", email = "", password = "";
@@ -49,7 +50,9 @@ public class AuthController {
 		// send to user service
 		UserService userService = new UserService();
 		try {
-			userService.saveUser(firstName, lastName, email, password, UserRole.USER);
+			User newUser = new User(firstName, lastName, email, password,UserRole.USER.toString());
+			userService.createUser(newUser);
+			System.out.println("User registration successful.");
 		} catch (IOException e) {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
@@ -80,14 +83,15 @@ public class AuthController {
 		// send to user service
 		UserService userService = new UserService();
 		try {
-			return userService.loginUser(email, password);
+			return userService.authenticateUser(email, password);
 		} catch (IOException e) {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
 		return null;
 	}
 
-	public static boolean isValidEmail(String email) {
+	private static boolean isValidEmail(String email) {
 		return email.contains("@") && email.contains(".");
 	}
+
 }

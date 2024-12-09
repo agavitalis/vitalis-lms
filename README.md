@@ -21,31 +21,25 @@
 ---
 
 ## Introduction
-The **Library Management System (LMS)** is a Java console-based application that enables efficient management of library operations such as book inventory, user account handling, and borrowing/return processes. Designed to cater to various roles like Admins, Librarians, and Students, this application ensures streamlined library workflows with user-friendly features.
+The **Library Management System (LMS)** is a Java console-based application that enables efficient management of library operations such as book inventory, user account handling, and borrowing/return processes. Designed to cater to various roles like  Librarians, and Students, this application ensures streamlined library workflows with user-friendly features.
 
 ---
 
 ## Features
 
 ### User Roles and Access Levels
-1. **Admin**:
-   - Manage books (add, update, delete).
-   - Oversee user accounts (students, staff, librarians).
-   - Monitor borrowing/return operations.
-   - Generate reports (e.g., borrowed books, overdue items).
 
-2. **Librarian**:
-   - Issue and return books.
+1. **Librarian**:
+   - Manage books (add, update, delete, issue and return) books.
    - Check book availability.
-   - Manage book reservations.
 
-3. **Student/Library Member**:
+2. **Student/Library Member**:
+   - Register.
    - Search books by title, author, genre, or ISBN.
    - Borrow, renew, and return books.
-   - Reserve unavailable books.
-   - View borrowing history and due dates.
+   - View the library catalog.
 
-4. **Guest User**:
+3. **Guest User**:
    - Search for books with read-only access.
    - View the library catalog.
 

@@ -1,4 +1,4 @@
-[{
+[ {
   "firstName" : "Vitalis",
   "lastName" : "Ogbonna",
   "email" : "agavitalisogbonna@gmail.com",
@@ -32,6 +32,12 @@
   "firstName" : "Patient ",
   "lastName" : "ozokwo",
   "email" : "pat@gmail.com",
+  "password" : "12345",
+  "role" : "USER"
+}, {
+  "firstName" : "Vitalis",
+  "lastName" : "Ogbonna",
+  "email" : "vitalis@gmail.com",
   "password" : "12345",
   "role" : "USER"
 } ]

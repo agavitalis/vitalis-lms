@@ -7,7 +7,7 @@ import lms.services.BookService;
 
 public class BookController {
 
-	public static List<Book> getBooks() {
+	public static List<Book> getBooksCatalog() {
 
 		BookService bookService = new BookService();
 		try {
@@ -27,7 +27,6 @@ public class BookController {
 			    System.out.println("Format: " + book.getFormat());
 			    System.out.println("Availability: " + book.getAvailability());
 			    System.out.println("Summary: " + book.getSummary());
-			    System.out.println("==========================================");
 			}
 
 		} catch (IOException e) {

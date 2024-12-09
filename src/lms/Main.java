@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import lms.controllers.AuthController;
 import lms.controllers.BookController;
+import lms.controllers.SupportController;
 
 public class Main {
 
@@ -49,10 +50,10 @@ public class Main {
 			AuthController.register(scanner);
 			break;
 		case 3:
-			BookController.getBooks();
+			BookController.getBooksCatalog();
 			break;
 		case 4:
-			System.out.println("You selected Contact support.");
+			SupportController.getSupportDetails();
 			break;
 		}
 
