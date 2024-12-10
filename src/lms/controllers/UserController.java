@@ -85,10 +85,11 @@ public class UserController {
 		UserService userService = new UserService();
 		try {
 			User user = userService.authenticateUser(email, password);
+			
 			if(user.getRole() == UserRole.USER.toString()) {
 				UserDashboardController.menu();
 			}else {
-				UserDashboardController.menu();
+				LibrarianDashboardController.menu();
 			}
 			
 		} catch (IOException e) {

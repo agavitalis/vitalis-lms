@@ -1,21 +1,23 @@
 package lms.controllers;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class UserDashboardController {
-	 public static void menu() {
+	 public static void menu() throws IOException {
 
 	        Scanner scanner = new Scanner(System.in);
 	        int userChoice = -1;
 
 	        while (userChoice != 5) { // Keep showing the menu until the user chooses to exit
-	            System.out.println("\n------Welcome to Digital Library Dashboad.--------\n"
-	                    + "What would you like to do:\n"
-	                    + "1. Search books by ISBN\n"
-	                    + "2. Borrow a Book\n"
-	                    + "3. Return a Book.\n"
-	                    + "4. View the library catalog.\n"
-	                    + "5. Logout and Close.");
+	        	System.out.println("\n------Welcome to VDL Dashboard.--------\n");
+	        	System.out.println("What would you like to do:");
+	        	System.out.println("1. Search books by ISBN");
+	        	System.out.println("2. Borrow a Book");
+	        	System.out.println("3. Return a Book.");
+	        	System.out.println("4. View the Library Catalog.");
+	        	System.out.println("5. Logout and Close.");
+
 
 	            userChoice = -1; // Reset user choice for each loop
 	            while (userChoice < 1 || userChoice > 5) {

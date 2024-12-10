@@ -1,55 +1,13 @@
 [ {
   "firstName" : "Vitalis",
   "lastName" : "Ogbonna",
+  "email" : "a00325718@gmastudent.tus.ie",
+  "password" : "12345",
+  "role" : "STUDENT"
+}, {
+  "firstName" : "Chidiebere",
+  "lastName" : "Ogbonna",
   "email" : "agavitalisogbonna@gmail.com",
   "password" : "12345",
-  "role" : "USER"
-}, {
-  "firstName" : "Nandini",
-  "lastName" : "Prof",
-  "email" : "profnandini@gmail.com",
-  "password" : "12345",
   "role" : "LIBRARIAN"
-}, {
-  "firstName" : "Stella",
-  "lastName" : "Ogbonna",
-  "email" : "stellaogbonna@gmail.com",
-  "password" : "12345",
-  "role" : "ADMIN"
-}, {
-  "firstName" : "Vitalis",
-  "lastName" : "Ogbonna",
-  "email" : "vivvaa.vivvaa@gmail.com",
-  "password" : "12345",
-  "role" : "USER"
-}, {
-  "firstName" : "Chisom",
-  "lastName" : "Okonkwo",
-  "email" : "stanly@gmail.com",
-  "password" : "1234",
-  "role" : "USER"
-}, {
-  "firstName" : "Patient ",
-  "lastName" : "ozokwo",
-  "email" : "pat@gmail.com",
-  "password" : "12345",
-  "role" : "USER"
-}, {
-  "firstName" : "Vitalis",
-  "lastName" : "Ogbonna",
-  "email" : "vitalis@gmail.com",
-  "password" : "12345",
-  "role" : "USER"
-}, {
-  "firstName" : "Nandini#",
-  "lastName" : "Sharma",
-  "email" : "nandini@yahooo.com",
-  "password" : "12345",
-  "role" : "USER"
-}, {
-  "firstName" : "Nandini!*",
-  "lastName" : "dsfd^\"",
-  "email" : "nandini.shar.a@gmail.com",
-  "password" : "12345",
-  "role" : "USER"
-} ]
+}]

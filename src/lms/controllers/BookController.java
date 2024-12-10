@@ -1,11 +1,16 @@
 package lms.controllers;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
 import lms.entities.Book;
+import lms.entities.User;
 import lms.services.BookService;
+import lms.services.BooksBorrowedService;
+import lms.services.UserService;
 
 public class BookController {
 
@@ -17,7 +22,7 @@ public class BookController {
 			System.out.println("Here is a list of our catalogs:");
 
 			for (Book book : bookService.getBooks()) {
-				System.out.println("==========================================");
+				System.out.println("\n--------------------------------");
 				System.out.println("Title: " + book.getTitle());
 				System.out.println("Authors: " + String.join(", ", book.getAuthors()));
 				System.out.println("ISBN: " + book.getIsbn());
@@ -59,9 +64,13 @@ public class BookController {
 		}
 	}
 
-	public static void borrowBook(Scanner scanner) {
+	public static void borrowBook(Scanner scanner) throws IOException {
 
 		String userInput = "";
+		UserService userService = new UserService();
+		User user = userService.getLoggedInUser();
+		
+		if (user == null) return;
 
 		while (userInput.isEmpty()) {
 			System.out.print("Enter a book isbn to borrow: ");
@@ -72,17 +81,28 @@ public class BookController {
 		}
 
 		BookService bookService = new BookService();
+		BooksBorrowedService booksBorrowedService = new BooksBorrowedService();
+		
 		try {
-			bookService.issueBook(userInput);
+			Book book = bookService.issueBook(userInput);
+			if(book != null) {
+				LocalDate today = LocalDate.now();
+		        LocalDate dueDate = today.plusDays(14);
+				booksBorrowedService.create(user, book, dueDate);
+			}
 			System.out.println("Book successfully issued");
 		} catch (IOException e) {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
 	}
 
-	public static void returnBook(Scanner scanner) {
+	public static void returnBook(Scanner scanner) throws IOException {
 
 		String userInput = "";
+		UserService userService = new UserService();
+		User user = userService.getLoggedInUser();
+		
+		if (user == null) return;
 
 		while (userInput.isEmpty()) {
 			System.out.print("Enter a book isbn to return: ");
@@ -93,8 +113,13 @@ public class BookController {
 		}
 
 		BookService bookService = new BookService();
+		BooksBorrowedService booksBorrowedService = new BooksBorrowedService();
+		
 		try {
-			bookService.returnBook(userInput);
+			Book book = bookService.returnBook(userInput);
+			if(book != null) {
+				booksBorrowedService.returnBook(user, book);
+			}
 			System.out.println("Book successfully returned");
 		} catch (IOException e) {
 			System.out.println("Internal server error: " + e.getMessage());

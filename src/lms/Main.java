@@ -14,13 +14,14 @@ public class Main {
         int userChoice = -1;
 
         while (userChoice != 5) { // Keep showing the menu until the user chooses to exit
-            System.out.println("Welcome to Vitalis Digital Library, We are pleased to see you.\n"
-                    + "Pls select an option from this menu to continue:\n"
-                    + "1. Login\n"
-                    + "2. Register as User\n"
-                    + "3. Browse Catalog.\n"
-                    + "4. Contact Support.\n"
-                    + "5. Logout and Close.");
+        	System.out.println("Welcome to Vitalis Digital Library(VDL), We are pleased to see you.\n");
+        	System.out.println("Please select an option from this menu to continue:");
+        	System.out.println("1. Login");
+        	System.out.println("2. Register as Student");
+        	System.out.println("3. Browse Catalog.");
+        	System.out.println("4. Contact Support.");
+        	System.out.println("5. Logout and Close.");
+
 
             userChoice = -1; // Reset user choice for each loop
             while (userChoice < 1 || userChoice > 5) {
@@ -41,10 +42,10 @@ public class Main {
 
             switch (userChoice) {
                 case 1:
-                    UserController.login(scanner);
+                    UserController.authenticate(scanner);
                     break;
                 case 2:
-                    UserController.register(scanner);
+                    UserController.createUser(scanner);
                     break;
                 case 3:
                     BookController.getBooksCatalog();

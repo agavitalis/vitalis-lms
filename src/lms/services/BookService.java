@@ -89,38 +89,40 @@ public class BookService implements IBookService {
 	    System.out.println("Book deleted successfully.");
 	}
 
-	public void issueBook(String isbn) throws IOException {
+	public Book issueBook(String isbn) throws IOException {
 	    List<Book> books = getBooks();
 	    for (Book book : books) {
 	        if (book.getIsbn().equals(isbn)) {
 	            if (book.getAvailability()) {
 	                System.out.println("Error: Book is already issued.");
-	                return;
+	                return null;
 	            }
 	            book.setAvailability(false);
 	            saveBooksToFile(books);
 	            System.out.println("Book issued successfully.");
-	            return;
+	            return book;
 	        }
 	    }
 	    System.out.println("Error: Book not found.");
+	    return null;
 	}
 
-	public void returnBook(String isbn) throws IOException {
+	public Book returnBook(String isbn) throws IOException {
 	    List<Book> books = getBooks();
 	    for (Book book : books) {
 	        if (book.getIsbn().equals(isbn)) {
 	            if (!book.getAvailability()) {
 	                System.out.println("Error: Book is not issued.");
-	                return;
+	                return null;
 	            }
 	            book.setAvailability(true);
 	            saveBooksToFile(books);
 	            System.out.println("Book returned successfully.");
-	            return;
+	            return book;
 	        }
 	    }
 	    System.out.println("Error: Book not found.");
+		return null;
 	}
 
 	private void saveBooksToFile(List<Book> books) throws IOException {
