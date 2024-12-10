@@ -40,4 +40,16 @@
   "email" : "vitalis@gmail.com",
   "password" : "12345",
   "role" : "USER"
+}, {
+  "firstName" : "Nandini#",
+  "lastName" : "Sharma",
+  "email" : "nandini@yahooo.com",
+  "password" : "12345",
+  "role" : "USER"
+}, {
+  "firstName" : "Nandini!*",
+  "lastName" : "dsfd^\"",
+  "email" : "nandini.shar.a@gmail.com",
+  "password" : "12345",
+  "role" : "USER"
 } ]

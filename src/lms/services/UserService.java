@@ -23,7 +23,6 @@ public class UserService implements IUserService {
         List<User> users = getUsers();
         
         for (User user : users) {
-        	 System.out.println(user.getFirstName());
             if (user.getEmail().equals(newUser.getEmail())) {
                 System.out.println("Error: Email already registered.");
                 return;

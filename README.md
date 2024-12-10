@@ -34,13 +34,13 @@ The **Library Management System (LMS)** is a Java console-based application that
    - Check book availability.
 
 2. **Student/Library Member**:
-   - Register.
+   - Register and Login
    - Search books by title, author, genre, or ISBN.
-   - Borrow, renew, and return books.
+   - Borrow and return books.
    - View the library catalog.
 
 3. **Guest User**:
-   - Search for books with read-only access.
+   - Search books by title, author, genre, or ISBN.
    - View the library catalog.
 
 ---
@@ -64,16 +64,6 @@ The **Library Management System (LMS)** is a Java console-based application that
 4. **Search and Filter**:
    - Search books using keywords, authors, or genres.
    - Filter results by availability, genre, or publication year.
-
-5. **Reservations and Holds**:
-   - Allow users to place holds on unavailable books.
-   - Notify users when reserved books are ready for borrowing.
-
-6. **Reporting and Analytics**:
-   - Generate reports such as:
-     - Most borrowed books.
-     - Active user statistics.
-     - Overdue items and fines.
 
 ---
 

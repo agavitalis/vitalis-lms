@@ -83,7 +83,13 @@ public class AuthController {
 		// send to user service
 		UserService userService = new UserService();
 		try {
-			return userService.authenticateUser(email, password);
+			User user = userService.authenticateUser(email, password);
+			if(user.getRole() == UserRole.USER.toString()) {
+				UserDashboard.menu();
+			}else {
+				UserDashboard.menu();
+			}
+			
 		} catch (IOException e) {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
