@@ -1,15 +1,16 @@
 package lms.controllers;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 import lms.entities.User;
 import lms.enums.UserRole;
 import lms.services.UserService;
 
-public class AuthController {
+public class UserController {
 	
-	public static void register(Scanner scanner) {
+	public static void createUser(Scanner scanner) {
 
 		String firstName = "", lastName = "", email = "", password = "";
 
@@ -58,7 +59,7 @@ public class AuthController {
 		}
 	}
 
-	public static User login(Scanner scanner) {
+	public static User authenticate(Scanner scanner) {
 
 		String email = "", password = "";
 
@@ -85,14 +86,36 @@ public class AuthController {
 		try {
 			User user = userService.authenticateUser(email, password);
 			if(user.getRole() == UserRole.USER.toString()) {
-				UserDashboard.menu();
+				UserDashboardController.menu();
 			}else {
-				UserDashboard.menu();
+				UserDashboardController.menu();
 			}
 			
 		} catch (IOException e) {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
+		return null;
+	}
+
+	public static List<User> getUsers() {
+
+		UserService userService = new UserService();
+		try {
+
+			System.out.println("Here is a list of our users\n:");
+
+			for (User user : userService.getUsers()) {
+				System.out.println("-----------------------------------");
+				System.out.println("FirstName: " + user.getFirstName());
+				System.out.println("LastName: " + user.getLastName());
+				System.out.println("Email: " + user.getEmail());
+				System.out.println("Role: " + user.getRole());
+			}
+
+		} catch (IOException e) {
+			System.out.println("Internal server error: " + e.getMessage());
+		}
+
 		return null;
 	}
 

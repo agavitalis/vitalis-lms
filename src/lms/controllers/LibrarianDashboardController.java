@@ -2,20 +2,22 @@ package lms.controllers;
 
 import java.util.Scanner;
 
-public class UserDashboard {
+public class LibrarianDashboardController {
 	 public static void menu() {
 
 	        Scanner scanner = new Scanner(System.in);
 	        int userChoice = -1;
 
 	        while (userChoice != 5) { // Keep showing the menu until the user chooses to exit
-	            System.out.println("Welcome to Digital Library Dashboad.\n"
+	            System.out.println("\n------Welcome to Digital Library Dashboad.--------\n"
 	                    + "What would you like to do:\n"
-	                    + "1. Search books by title, author, genre, or ISBN\n"
-	                    + "2. Borrow a Book\n"
-	                    + "3. Return a Book.\n"
-	                    + "4.View the library catalog.\n"
+	                    + "1. Create Book\n"
+	                    + "2. Update Book \n"
+	                    + "3. Delete Book .\n"
+	                    + "4. View Library Catalog.\n"
+	                    + "4. View Library Users.\n"
 	                    + "5. Logout and Close.");
+	           
 
 	            userChoice = -1; // Reset user choice for each loop
 	            while (userChoice < 1 || userChoice > 5) {
@@ -36,18 +38,21 @@ public class UserDashboard {
 
 	            switch (userChoice) {
 	                case 1:
-	                	 System.out.println("You Selected 1");
+	                	BookController.createBook(scanner);
 	                    break;
 	                case 2:
-	                    AuthController.register(scanner);
+	                	BookController.updateBook(scanner);
 	                    break;
 	                case 3:
-	                    BookController.getBooksCatalog();
+	                	BookController.deleteBook(scanner);
 	                    break;
 	                case 4:
-	                    SupportController.getSupportDetails();
+	                	BookController.getBooksCatalog();
 	                    break;
 	                case 5:
+	                	UserController.getUsers();
+	                    break;
+	                case 6:
 	                    System.out.println("Thank you for using Vitalis Digital Library. Goodbye!");
 	                    scanner.close();
 	                    System.exit(0); // Terminate the program

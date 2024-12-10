@@ -2,7 +2,7 @@ package lms;
 
 import java.util.Scanner;
 
-import lms.controllers.AuthController;
+import lms.controllers.UserController;
 import lms.controllers.BookController;
 import lms.controllers.SupportController;
 
@@ -41,10 +41,10 @@ public class Main {
 
             switch (userChoice) {
                 case 1:
-                    AuthController.login(scanner);
+                    UserController.login(scanner);
                     break;
                 case 2:
-                    AuthController.register(scanner);
+                    UserController.register(scanner);
                     break;
                 case 3:
                     BookController.getBooksCatalog();

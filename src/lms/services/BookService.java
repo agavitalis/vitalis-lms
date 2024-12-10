@@ -45,20 +45,27 @@ public class BookService implements IBookService {
         return null; 
     }
 
-	public void updateBook(String isbn, Book updatedBook) throws IOException {
+	public void updateBook(Book updatedBook) throws IOException {
 	    List<Book> books = getBooks();
 	    boolean found = false;
 
 	    for (Book book : books) {
-	        if (book.getIsbn().equals(isbn)) {
+	        if (book.getIsbn().equals(updatedBook.getIsbn())) {
 	            book.setTitle(updatedBook.getTitle());
 	            book.setAuthors(updatedBook.getAuthors());
 	            book.setPublicationYear(updatedBook.getPublicationYear());
+	            book.setLanguage(updatedBook.getLanguage());
+	            book.setPublisher(updatedBook.getPublisher());
+	            book.setGenres(updatedBook.getGenres());
+	            book.setPageCount(updatedBook.getPageCount());
+	            book.setSummary(updatedBook.getSummary());
+	            book.setFormat(updatedBook.getFormat());
 	            book.setAvailability(updatedBook.getAvailability());
 	            found = true;
 	            break;
 	        }
 	    }
+
 
 	    if (!found) {
 	        System.out.println("Error: Book not found.");

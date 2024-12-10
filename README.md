@@ -30,12 +30,13 @@ The **Library Management System (LMS)** is a Java console-based application that
 ### User Roles and Access Levels
 
 1. **Librarian**:
-   - Manage books (add, update, delete, issue and return) books.
+   - Manage books (Create, Read, Update, Delete) books.
    - Check book availability.
+   - See Library Users.
 
 2. **Student/Library Member**:
    - Register and Login
-   - Search books by title, author, genre, or ISBN.
+   - Search books by ISBN.
    - Borrow and return books.
    - View the library catalog.
 
@@ -46,24 +47,25 @@ The **Library Management System (LMS)** is a Java console-based application that
 ---
 
 ### Functional Requirements
-1. **Book Management**:
-   - Add, update, and remove books.
-   - Categorize books by genre, subject, or language.
-   - Maintain book statuses: available, issued, reserved, or lost.
 
-2. **User Management**:
-   - Register and manage user accounts with roles.
-   - Authenticate users via username/password or library ID.
-   - Enable password resets and profile updates.
+#### User Roles and Access Levels
 
-3. **Borrowing and Returns**:
-   - Set borrowing limits per user type.
-   - Automatically calculate due dates and late fees.
-   - Notify users about due dates and overdue books.
+1. **Librarian**
+   - The system shall allow librarians to create, read, update, and delete book records in the library catalog.
+   - The system shall provide functionality for librarians to check the availability status of a book (available, borrowed, reserved).
+   - The system shall display a list of all registered library users to the librarian.
 
-4. **Search and Filter**:
-   - Search books using keywords, authors, or genres.
-   - Filter results by availability, genre, or publication year.
+2. **Student/Library Member**
+   - The system shall enable students/library members to register with their details, including name, email, and password.
+   - The system shall allow students/library members to log in with their credentials.
+   - The system shall enable students/library members to search for books using their ISBN.
+   - The system shall allow students/library members to borrow available books and record the borrowing transaction.
+   - The system shall enable students/library members to return borrowed books and update their status in the system.
+   - The system shall display the library catalog for students/library members to browse.
+
+3. **Guest User**
+   - The system shall allow guest users to search for books by title, author, genre, or ISBN without requiring login or registration.
+   - The system shall display the library catalog for guest users to browse without showing additional member-specific details.
 
 ---
 
