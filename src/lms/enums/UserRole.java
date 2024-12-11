@@ -1,7 +1,7 @@
 package lms.enums;
 
 public enum UserRole{
-	USER,
+	STUDENT,
 	GUEST,
 	LIBRARIAN
 }

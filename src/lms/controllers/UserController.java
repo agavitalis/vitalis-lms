@@ -7,6 +7,7 @@ import java.util.Scanner;
 import lms.entities.User;
 import lms.enums.UserRole;
 import lms.services.UserService;
+import lms.utils.*;
 
 public class UserController {
 	
@@ -30,12 +31,12 @@ public class UserController {
 			}
 		}
 
-		while (email.isEmpty() || !isValidEmail(email)) {
+		while (email.isEmpty() || !LmsUtil.isValidEmail(email)) {
 			System.out.print("Enter your email: ");
 			email = scanner.nextLine(); // Read email
 			if (email.isEmpty()) {
 				System.out.println("Email cannot be empty. Please enter a valid email.");
-			} else if (!isValidEmail(email)) {
+			} else if (!LmsUtil.isValidEmail(email)) {
 				System.out.println("Invalid email format. Please enter a valid email.");
 			}
 		}
@@ -51,9 +52,9 @@ public class UserController {
 		// send to user service
 		UserService userService = new UserService();
 		try {
-			User newUser = new User(firstName, lastName, email, password,UserRole.USER.toString());
+			User newUser = new User(firstName, lastName, email, password,UserRole.STUDENT.toString());
 			userService.createUser(newUser);
-			System.out.println("User registration successful.");
+			System.out.println("Student registration successful.");
 		} catch (IOException e) {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
@@ -63,12 +64,13 @@ public class UserController {
 
 		String email = "", password = "";
 
-		while (email.isEmpty() || !isValidEmail(email)) {
+		while (email.isEmpty() || !LmsUtil.isValidEmail(email)) {
 			System.out.print("Enter your email: ");
 			email = scanner.nextLine(); // Read email
 			if (email.isEmpty()) {
 				System.out.println("Email cannot be empty. Please enter a valid email.");
-			} else if (!isValidEmail(email)) {
+				
+			} else if (!LmsUtil.isValidEmail(email)) {
 				System.out.println("Invalid email format. Please enter a valid email.");
 			}
 		}
@@ -86,7 +88,7 @@ public class UserController {
 		try {
 			User user = userService.authenticateUser(email, password);
 			
-			if(user.getRole() == UserRole.USER.toString()) {
+			if(user.getRole() == UserRole.STUDENT.toString()) {
 				UserDashboardController.menu();
 			}else {
 				LibrarianDashboardController.menu();
@@ -120,8 +122,6 @@ public class UserController {
 		return null;
 	}
 
-	private static boolean isValidEmail(String email) {
-		return email.contains("@") && email.contains(".");
-	}
+	
 
 }

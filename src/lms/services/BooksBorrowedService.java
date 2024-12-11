@@ -14,12 +14,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lms.entities.Book;
 import lms.entities.BooksBorrowed;
 import lms.entities.User;
+import lms.interfaces.IBooksBorrowedService;
 
-public class BooksBorrowedService {
+public class BooksBorrowedService implements IBooksBorrowedService {
 	
     private static final String FILE_PATH = "data/books_borrowed.json";
 
-    private List<BooksBorrowed> getAllBorrowedBooks() throws IOException {
+    public List<BooksBorrowed> getAllBorrowedBooks() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         File file = new File(FILE_PATH);
 
@@ -29,19 +30,6 @@ public class BooksBorrowedService {
 
         return mapper.readValue(file, new TypeReference<List<BooksBorrowed>>() {});
     }
-   
-    private void saveBorrowedBooksToFile(List<BooksBorrowed> borrowedBooks) throws IOException {
-	    File file = new File(FILE_PATH);
-	    ObjectMapper mapper = new ObjectMapper();
-
-	    try {
-	        mapper.writerWithDefaultPrettyPrinter().writeValue(file, borrowedBooks);
-	    } catch (IOException e) {
-	        System.out.println("An error occurred while saving the books.");
-	        e.printStackTrace();
-	    }
-	}
-
 
     public void create(User user, Book book, LocalDate dueDate) throws IOException {
         List<BooksBorrowed> borrowedBooks = getAllBorrowedBooks();
@@ -74,4 +62,16 @@ public class BooksBorrowedService {
 
         System.out.println("Book successfully returned!");
     }
+
+    private void saveBorrowedBooksToFile(List<BooksBorrowed> borrowedBooks) throws IOException {
+	    File file = new File(FILE_PATH);
+	    ObjectMapper mapper = new ObjectMapper();
+
+	    try {
+	        mapper.writerWithDefaultPrettyPrinter().writeValue(file, borrowedBooks);
+	    } catch (IOException e) {
+	        System.out.println("An error occurred while saving the books.");
+	        e.printStackTrace();
+	    }
+	}
 }

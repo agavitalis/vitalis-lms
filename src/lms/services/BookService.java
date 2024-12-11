@@ -14,12 +14,6 @@ public class BookService implements IBookService {
 	
     private static final String FILE_PATH = "data/books.json";
 	
-	public List<Book> getBooks() throws IOException {
-		 ObjectMapper mapper = new ObjectMapper();
-         List<Book> books = mapper.readValue(new File(FILE_PATH), new TypeReference<List<Book>>() {});
-         return books;
-	}
-
 	public void createBook(Book newBook) throws IOException {
 		
 		List<Book> books = getBooks();
@@ -35,6 +29,12 @@ public class BookService implements IBookService {
         saveBooksToFile(books);
     }
 
+	public List<Book> getBooks() throws IOException {
+		 ObjectMapper mapper = new ObjectMapper();
+        List<Book> books = mapper.readValue(new File(FILE_PATH), new TypeReference<List<Book>>() {});
+        return books;
+	}
+	
 	public Book getBook(String isbn)throws IOException {
     	List<Book> books = getBooks();
         for (Book book : books) {
