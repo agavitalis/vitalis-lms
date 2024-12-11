@@ -24,6 +24,10 @@
 The **Library Management System (LMS)** is a Java console-based application that enables efficient management of library operations such as book inventory, user account handling, and borrowing/return processes. Designed to cater to various roles like  Librarians, and Students, this application ensures streamlined library workflows with user-friendly features.
 
 ---
+## UML Diagram
+
+![VLMS UML Diagram](vitalis-lms-uml.png)
+
 
 ## Features
 
@@ -73,9 +77,15 @@ The **Library Management System (LMS)** is a Java console-based application that
 ```
 LibraryManagementSystem/
 ├── src/
-│   ├── 
-│   ├── 
-│   ├── 
+│   ├── lms
+│   ├── lms.controllers
+│   ├── lms.entities
+│   ├── lms.enums
+│   ├── lms.interfaces
+│   ├── lms.services
+│   ├── lms.utils
+├── data
+├── lib
 ├── .gitignore         # Git ignore rules
 ├── README.md          # Project documentation
 ```
