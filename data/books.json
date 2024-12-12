@@ -1,41 +1,49 @@
-[
-  {
-    "title": "To Kill a Mockingbird",
-    "authors": ["Harper Lee"],
-    "isbn": "978-0-06-112008-4",
-    "publicationYear": 1960,
-    "language": "English",
-    "publisher": "J.B. Lippincott & Co.",
-    "genres": ["Fiction", "Drama"],
-    "pageCount": 281,
-    "summary": "A novel about the serious issues of rape and racial inequality narrated by a young girl in the American South.",
-    "format": "Hardcover",
-    "availability": true
-  },
-  {
-    "title": "1984",
-    "authors": ["George Orwell"],
-    "isbn": "978-0-452-28423-4",
-    "publicationYear": 1949,
-    "language": "English",
-    "publisher": "Secker & Warburg",
-    "genres": ["Dystopian", "Political Fiction", "Science Fiction"],
-    "pageCount": 328,
-    "summary": "A dystopian novel set in a totalitarian regime under constant surveillance by Big Brother.",
-    "format": "Paperback",
-    "availability": true
-  },
-  {
-    "title": "The Great Gatsby",
-    "authors": ["F. Scott Fitzgerald"],
-    "isbn": "978-0-7432-7356-5",
-    "publicationYear": 1925,
-    "language": "English",
-    "publisher": "Charles Scribner's Sons",
-    "genres": ["Fiction", "Tragedy"],
-    "pageCount": 180,
-    "summary": "A story about the young and mysterious millionaire Jay Gatsby and his quixotic passion for Daisy Buchanan.",
-    "format": "eBook",
-    "availability": true
-  }
-]
+[ {
+  "title" : "To Kill a Mockingbird",
+  "authors" : [ "Harper Lee" ],
+  "isbn" : "978-0-06-112008-4",
+  "publicationYear" : 1960,
+  "language" : "English",
+  "publisher" : "J.B. Lippincott & Co.",
+  "genres" : [ "Fiction", "Drama" ],
+  "pageCount" : 281,
+  "summary" : "A novel about the serious issues of rape and racial inequality narrated by a young girl in the American South.",
+  "format" : "Hardcover",
+  "availability" : true
+}, {
+  "title" : "1984",
+  "authors" : [ "George Orwell" ],
+  "isbn" : "978-0-452-28423-4",
+  "publicationYear" : 1949,
+  "language" : "English",
+  "publisher" : "Secker & Warburg",
+  "genres" : [ "Dystopian", "Political Fiction", "Science Fiction" ],
+  "pageCount" : 328,
+  "summary" : "A dystopian novel set in a totalitarian regime under constant surveillance by Big Brother.",
+  "format" : "Paperback",
+  "availability" : true
+}, {
+  "title" : "The Great Gatsby",
+  "authors" : [ "F. Scott Fitzgerald" ],
+  "isbn" : "978-0-7432-7356-5",
+  "publicationYear" : 1925,
+  "language" : "English",
+  "publisher" : "Charles Scribner's Sons",
+  "genres" : [ "Fiction", "Tragedy" ],
+  "pageCount" : 180,
+  "summary" : "A story about the young and mysterious millionaire Jay Gatsby and his quixotic passion for Daisy Buchanan.",
+  "format" : "eBook",
+  "availability" : true
+}, {
+  "title" : "adams",
+  "authors" : [ "vitalis", "ogbonna" ],
+  "isbn" : "12345678",
+  "publicationYear" : 2024,
+  "language" : "englih",
+  "publisher" : "vitalis",
+  "genres" : [ "comedy" ],
+  "pageCount" : 34,
+  "summary" : "Lorem",
+  "format" : "pdf",
+  "availability" : true
+} ]

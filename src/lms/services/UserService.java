@@ -51,10 +51,7 @@ public class UserService implements IUserService {
 		List<User> users = getUsers();
 		for (User user : users) {
 			if (email.equals(user.getEmail()) && password.equals(user.getPassword())) {
-
-				System.out.println(
-						String.format("\nLogin Successful!\n" + "First Name: %s\n" + "Last Name: %s\n" + "Email: %s",
-								"Role: %s", user.getFirstName(), user.getLastName(), user.getEmail(), user.getRole()));
+				System.out.println("\nLogin Successful!" );
 				saveLoggedInUserToFile(user);
 				return user;
 			}
