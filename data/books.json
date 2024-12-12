@@ -10,7 +10,7 @@
     "pageCount": 281,
     "summary": "A novel about the serious issues of rape and racial inequality narrated by a young girl in the American South.",
     "format": "Hardcover",
-    "availability": "In Stock"
+    "availability": true
   },
   {
     "title": "1984",
@@ -23,7 +23,7 @@
     "pageCount": 328,
     "summary": "A dystopian novel set in a totalitarian regime under constant surveillance by Big Brother.",
     "format": "Paperback",
-    "availability": "Out of Stock"
+    "availability": true
   },
   {
     "title": "The Great Gatsby",
@@ -36,6 +36,6 @@
     "pageCount": 180,
     "summary": "A story about the young and mysterious millionaire Jay Gatsby and his quixotic passion for Daisy Buchanan.",
     "format": "eBook",
-    "availability": "In Stock"
+    "availability": true
   }
 ]

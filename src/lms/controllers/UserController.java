@@ -89,7 +89,7 @@ public class UserController {
 			User user = userService.authenticateUser(email, password);
 			
 			if(user.getRole() == UserRole.STUDENT.toString()) {
-				UserDashboardController.menu();
+				StudentDashboardController.menu();
 			}else {
 				LibrarianDashboardController.menu();
 			}

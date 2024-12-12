@@ -14,34 +14,25 @@ import lms.services.UserService;
 
 public class BookController {
 
-	public static List<Book> getBooksCatalog() {
-
-		BookService bookService = new BookService();
-		try {
-
-			System.out.println("Here is a list of our catalogs:");
-
-			for (Book book : bookService.getBooks()) {
-				System.out.println("\n--------------------------------");
-				System.out.println("Title: " + book.getTitle());
-				System.out.println("Authors: " + String.join(", ", book.getAuthors()));
-				System.out.println("ISBN: " + book.getIsbn());
-				System.out.println("Publication Year: " + book.getPublicationYear());
-				System.out.println("Language: " + book.getLanguage());
-				System.out.println("Publisher: " + book.getPublisher());
-				System.out.println("Genres: " + String.join(", ", book.getGenres()));
-				System.out.println("Page Count: " + book.getPageCount());
-				System.out.println("Format: " + book.getFormat());
-				System.out.println("Availability: " + book.getAvailability());
-				System.out.println("Summary: " + book.getSummary());
+	 public static void browseCatalog() {
+		    BookService bookService = new BookService();
+	        List<Book> catalog = null;
+			try {
+				catalog = bookService.getBooks();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 
-		} catch (IOException e) {
-			System.out.println("Internal server error: " + e.getMessage());
-		}
+	        if (catalog == null) {
+	            System.out.println("The catalog is empty. Please check back later.");
+	            return;
+	        }
 
-		return null;
-	}
+	        System.out.println("\nAvailable Books:");
+	        catalog.forEach(book -> System.out.println(
+	                "- Title: " + book.getTitle() + ", Author: " + String.join(", ", book.getAuthors()) + ", ISBN: " + book.getIsbn()
+	        ));
+	    }
 
 	public static void searchBook(Scanner scanner) {
 
@@ -63,6 +54,7 @@ public class BookController {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
 	}
+	
 
 	public static void borrowBook(Scanner scanner) throws IOException {
 

@@ -1,6 +1,6 @@
 package lms.entities;
 
-public class User {
+public sealed class User permits Student, Librarian{
     private String firstName;
     private String lastName;
     private String email;

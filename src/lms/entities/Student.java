@@ -2,7 +2,7 @@ package lms.entities;
 
 import java.time.LocalDate;
 
-public class Student extends User {
+public non-sealed class Student extends User {
 
 	private User user;
 
