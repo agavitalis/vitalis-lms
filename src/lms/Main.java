@@ -9,7 +9,7 @@ import lms.controllers.SupportController;
 public class Main {
 
     public static void main(String[] args) {
-    	System.out.println("Welcome to Vitalis Digital Library (VDL). We are pleased to see you.");
+    	System.out.print("Welcome to Vitalis Digital Library (VDL). How are you doing today.");
     	Scanner scanner = new Scanner(System.in);
 
         boolean isRunning = true;
@@ -41,6 +41,7 @@ public class Main {
     }
     
     private static void displayMenu() {
+    	System.out.println("\n-------------------------------------------------");
         System.out.println("Please select an option from the menu to continue:");
         System.out.println("1. Login");
         System.out.println("2. Register as Student");

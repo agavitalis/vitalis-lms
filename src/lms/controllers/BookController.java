@@ -53,6 +53,31 @@ public class BookController {
 			System.out.println("Internal server error: " + e.getMessage());
 		}
 	}
+	
+	public static void checkBookAvaliability(Scanner scanner) {
+
+		String userSearchTerm = "";
+
+		while (userSearchTerm.isEmpty()) {
+			System.out.print("Enter a book isbn to check avaliability: ");
+			userSearchTerm = scanner.nextLine();
+			if (userSearchTerm.isEmpty()) {
+				System.out.println("Your search term is empty. Please enter a valid search term.");
+			}
+		}
+
+		BookService bookService = new BookService();
+		try {
+			Book book = bookService.getBook(userSearchTerm);
+			if(book != null && book.getAvailability() == true) {
+				 System.out.println( book.getTitle() + " is available.");
+			}else {
+				 System.out.println("The book is not available.");
+			}
+		} catch (IOException e) {
+			System.out.println("Internal server error: " + e.getMessage());
+		}
+	}
 
 	public static void borrowBook(Scanner scanner) throws IOException {
 

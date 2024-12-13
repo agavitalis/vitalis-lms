@@ -1,7 +1,7 @@
 [ {
   "title" : "To Kill a Mockingbird",
   "authors" : [ "Harper Lee" ],
-  "isbn" : "978-0-06-112008-4",
+  "isbn" : "1120080",
   "publicationYear" : 1960,
   "language" : "English",
   "publisher" : "J.B. Lippincott & Co.",
@@ -13,7 +13,7 @@
 }, {
   "title" : "1984",
   "authors" : [ "George Orwell" ],
-  "isbn" : "978-0-452-28423-4",
+  "isbn" : "9782842",
   "publicationYear" : 1949,
   "language" : "English",
   "publisher" : "Secker & Warburg",
@@ -25,7 +25,7 @@
 }, {
   "title" : "The Great Gatsby",
   "authors" : [ "F. Scott Fitzgerald" ],
-  "isbn" : "978-0-7432-7356-5",
+  "isbn" : "9787356",
   "publicationYear" : 1925,
   "language" : "English",
   "publisher" : "Charles Scribner's Sons",
@@ -34,16 +34,4 @@
   "summary" : "A story about the young and mysterious millionaire Jay Gatsby and his quixotic passion for Daisy Buchanan.",
   "format" : "eBook",
   "availability" : true
-}, {
-  "title" : "adams",
-  "authors" : [ "vitalis", "ogbonna" ],
-  "isbn" : "12345678",
-  "publicationYear" : 2024,
-  "language" : "englih",
-  "publisher" : "vitalis",
-  "genres" : [ "comedy" ],
-  "pageCount" : 34,
-  "summary" : "Lorem",
-  "format" : "pdf",
-  "availability" : true
-} ]
+}]

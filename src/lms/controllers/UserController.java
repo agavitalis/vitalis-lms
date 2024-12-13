@@ -88,10 +88,12 @@ public class UserController {
 		try {
 			User user = userService.authenticateUser(email, password);
 			
-			if(user.getRole() == UserRole.STUDENT.toString()) {
-				StudentDashboardController.menu();
+			if(user.getRole().equals(UserRole.STUDENT.toString())) {
+				StudentDashboardController studentDashboardController = new StudentDashboardController();
+				studentDashboardController.menu();
 			}else {
-				LibrarianDashboardController.menu();
+				LibrarianDashboardController librarianDashboardController = new LibrarianDashboardController();
+				librarianDashboardController.menu();
 			}
 			
 		} catch (IOException e) {

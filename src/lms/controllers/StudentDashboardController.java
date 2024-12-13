@@ -3,9 +3,9 @@ package lms.controllers;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class StudentDashboardController {
+public class StudentDashboardController extends DashboardController{
 
-    public static void menu() throws IOException {
+    public void menu() throws IOException {
     	System.out.println("------ Welcome to VDL Dashboard ------");
         Scanner scanner = new Scanner(System.in);
         int userChoice = -1;
@@ -26,6 +26,7 @@ public class StudentDashboardController {
     }
     
     private static void displayMenu() {
+    	 System.out.println("\n------------------------------");
     	 System.out.println("What would you like to do:");
          System.out.println("1. Search books by ISBN");
          System.out.println("2. Borrow a Book");
